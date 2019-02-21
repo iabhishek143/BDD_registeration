@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Email Registration Form</title>
+</head>
+<script >
+function comparePasswords(){
+	var pass1 = document.getElementById("txtPassword");
+	var pass2 = document.getElementById("txtConfPassword");
+	if(pass1.value != pass2.value )
+	{
+		alert("Passwords donot match!");
+	}	
+}
+
+</script>
+<style type="text/css"> 
+#myStyle, input
+{
+border:2px solid #a1a1a1;
+padding:5px 5px; 
+background:#ffffff;
+
+border-radius:5px;
+-moz-border-radius:10px; /* Firefox 3.6 and earlier */
+}
+
+#Format
+{
+	font-family:Calibri;
+}
+
+#Format1
+{
+	font-family:Calibri;
+}
+</style>
+<body  style="background-image:url(background1.jpg); background-repeat:no-repeat; background-origin:content-box; background-size:100% 140%; font-family:Calibri;" width=70%  >
+<h1 align="center">Email Registration</H1>
+       <form  name="frmReg" onSubmit=alert('Submitted')>
+
+
+           <table  align="center" style="font-family:Calibri; box-shadow:20px 20px 50px 20px green;" >
+            
+            
+            <tr>
+                <td align="right">User Name :</td>
+                <td><input type="text" id ="txtUserName" name="txtUName" /></td>
+            </tr>
+
+ 			<tr>
+                <td align="right">Password :</td>
+                <td><input type="password" id ="txtPassword" name="txtPwd" /></td>
+            </tr>
+            
+			<tr>
+                <td align="right">Confirm Password :</td>
+                <td><input class="Format" type="password" id ="txtConfPassword" onchange="javascript:comparePasswords()" /></td>
+            </tr>
+			<tr>
+                <td align="right">First Name :</td>
+                <td><input type="text" class="Format1" id ="txtFirstName" name="txtFN" /></td>
+            </tr>
+			<tr>
+                <td align="right">Last Name :</td>
+                <td><input type="text" id ="txtLastName" name="txtLN" /></td>
+            </tr>
+			<tr>
+                <td align="right">Gender :</td>
+                <td><input type=radio id =rbMale name=gender value="Male">Male</input>
+				<input type=radio id =rbFemale name=gender value="Female">Female</input></td>
+            </tr>
+			
+			<tr>
+                <td align="right">Date of Birth :</td>
+                <td><input type="date" name="DtOB" id ="DOB" /></td>
+            </tr>
+				
+ 			<tr>
+                <td align="right">Email :</td>
+                <td><input class="Format" type="email" name="Email" id ="txtEmail" /></td>
+            </tr>
+
+ 			<tr>
+                <td align="right">Address :</td>
+                <td><input  type="textarea" name="Address" id="txtAddress" multiline="true" /></td>
+            </tr>
+
+            <tr>
+	            <td align="right">City : </td>
+	            <td><select name="City" multiple>
+					  <option value="Mumbai1">Mumbai</option>
+					  <option value="Pune1">Pune</option>
+					  <option value="Bangalore1">Bangalore</option>
+					  <option value="Chennai1">Chennai</option>
+				</select></td>
+	        </tr>
+			<tr>
+                <td align="right">Phone :</td>
+                <td><input type="text" name="Phone" id ="txtPhone" /></td>
+            </tr>
+                <td align="right">Hobbies :</td>
+				<td>
+					<input type="checkbox" name="chkHobbies" value="Music">Music</input>
+					<input type="checkbox" name="chkHobbies" value="Reading">Reading</input>
+					<input type="checkbox" name="chkHobbies" value="Movies">Movies</input>
+				</td>
+            </tr>
+			<tr>
+                <td colspan=2 align="center"><br><Input type="submit" name="submit" value="Submit" ></Input>
+				<button id="myStyle" type="reset" name="reset" value="Reset">Reset</button></td>
+            </tr>
+           </table>
+
+       </form>
+    </body>
+</html>
